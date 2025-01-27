@@ -7,8 +7,20 @@
     <title>{{ $dictionary->word }}</title>
 </head>
 <body>
-    <a href="{{ route('dictionary.index') }}">Return</a>
-    <h1>{{ $dictionary->word }}</h1>
-    <p>{{ $dictionary->definition }}</p>
+    <nav>
+        <a href="{{ route('dictionary.index') }}">Return</a>
+    </nav>
+    <div>
+        Prev... <br>
+        <a href="{{ route('dictionary.show', $previous->id) }}">{{ $previous->word }}</a>
+    </div>
+    <div>
+        <h1>{{ $dictionary->word }}</h1>
+        <p>{{ $dictionary->definition }}</p>
+    </div>
+    <div>
+        Next... <br>
+        <a href="{{ route('dictionary.show', $next->id) }}">{{ $next->word }}</a>
+    </div>
 </body>
 </html>

@@ -48,7 +48,7 @@ class DictionarySeeder extends Seeder
                 'definition' => 'isang bayan ngayon sa Laguna'
             ],
             [
-                'word' => 'Basilisco',
+                'word' => 'Basilisko',
                 'definition' => 'isang hayop na may anyong butiki, umano ang hininga at kislap ay nakamamatay'
             ],
             [
@@ -104,7 +104,7 @@ class DictionarySeeder extends Seeder
                 'definition' => 'isa sa mga dalagang sakdal ganda na likha ng isipang makapapanampalataya ng mga musulman na ang tungkulin ay umakay ng mga mapapalad na pinagpala sa paraiso'
             ],
             [
-                'word' => 'Hiena',
+                'word' => 'Hayena',
                 'definition' => 'isang uri ng hayop sa Aprika, ang mukha nito ay kahawig ng lobo'
             ],
             [
@@ -214,6 +214,98 @@ class DictionarySeeder extends Seeder
             [
                 'word' => 'Venus',
                 'definition' => 'diyosa ng pag-ibig at kagandahan'
+            ],
+            [
+                'word' => 'Mapanglaw',
+                'definition' => 'malungkot, madilim, o nakakapagpahirap ng damdamin'
+            ],
+            [
+                'word' => 'Dawag',
+                'definition' => 'masinsing kumpol ng mga tinik o halamang ligaw'
+            ],
+            [
+                'word' => 'Matinik',
+                'definition' => 'puno o halamang may mga tinik'
+            ],
+            [
+                'word' => 'Pebong silang',
+                'definition' => 'tumutukoy kay Apollo, ang diyos ng araw sa mitolohiyang Griyego-Romano'
+            ],
+            [
+                'word' => 'Dalamhati',
+                'definition' => 'matinding kalungkutan o pighati'
+            ],
+            [
+                'word' => 'Kahapis',
+                'definition' => 'malalim na kalungkutan o kapighatian'
+            ],
+            [
+                'word' => 'Nakalulunos',
+                'definition' => 'nakakaawa o nakakalungkot'
+            ],
+            [
+                'word' => 'Matimpi',
+                'definition' => 'mahinahon o kontrolado ang damdamin'
+            ],
+            [
+                'word' => 'Namimilipit',
+                'definition' => 'nakabaluktot o nakakapit nang mahigpit'
+            ],
+            [
+                'word' => 'Bulo',
+                'definition' => 'mala-balahibo o mala-tinik na bahagi ng halaman'
+            ],
+            [
+                'word' => 'Sipres',
+                'definition' => 'isang uri ng puno na karaniwang nauugnay sa pagluluksa'
+            ],
+            [
+                'word' => 'Higerang kutad',
+                'definition' => 'isang uri ng punong may malapad na dahon ngunit walang bunga'
+            ],
+            [
+                'word' => 'Syerpe',
+                'definition' => 'ahas o serpiyente'
+            ],
+            [
+                'word' => 'Higera',
+                'definition' => 'punong kahoy na malapad ang dahon at kadalasang nauugnay sa kalungkutan'
+            ],
+            [
+                'word' => 'Pupas',
+                'definition' => 'kupas o nalalanta na ang kulay'
+            ],
+            [
+                'word' => 'Pinag-usig',
+                'definition' => 'inusig, pinagmalupitan, o hinabol ng masamang kapalaran.'
+            ],
+            [
+                'word' => 'Bagun-taong basal',
+                'definition' => 'kabataang dalisay, walang dungis'
+            ],
+            [
+                'word' => 'Balantok',
+                'definition' => 'hugis arko o kurba'
+            ],
+            [
+                'word' => 'Sapong ginto',
+                'definition' => ' ningning o kinang ng bagong ginintong bagay'
+            ],
+            [
+                'word' => 'Uyamin',
+                'definition' => 'kutyain o hamakin'
+            ],
+            [
+                'word' => 'Dalita',
+                'definition' => 'kahirapan o pagdurusa'
+            ],
+            [
+                'word' => 'Naniniig',
+                'definition' => 'nakabilanggo, walang malayang makakilos'
+            ],
+            [
+                'word' => 'Linggatong',
+                'definition' => 'matinding alalahanin o pasanin'
             ],
             // [
             //     'word' => '',

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('dictionaries', function (Blueprint $table) {
             $table->id();
-            $table->string('word');
+            $table->string('word')->unique();
             $table->text('definition');
             $table->timestamps();
         });
