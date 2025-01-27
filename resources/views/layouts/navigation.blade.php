@@ -1,3 +1,4 @@
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 <nav x-data="{ open: false }">
     <!-- Settings Dropdown -->
     <div class="hidden sm:flex sm:items-center sm:ms-6">
