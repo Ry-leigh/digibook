@@ -11,17 +11,26 @@
         background-image: url('{{ asset('images/chapter-covers/chapter1.jpg') }}');
     }
 
+    .dropdown {
+        position: absolute;
+    }
+
     nav {
         display: flex;
         justify-content: flex-end;
+        margin: 0.5rem;
     }
 
     .nav-button {
-
+        height: 7rem;
+        width: auto;
+        margin: 0.5rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
     }
 </style>
 <body>
-    <div style="position: absolute">
+    <div class="dropdown">
         @include('layouts.navigation')
     </div>
     <nav>
@@ -34,7 +43,9 @@
         <a href="{{ url('/about') }}">
             <img class="nav-button" src="{{ asset('images/achievement-badges/chapter1.jpg') }}" alt="Dicitonary">
         </a>
-        <button class="" style="background-image: url('{{ asset('images/chapter-covers/chapter3.jpg') }}');">Mute/Unmute</button>
+        <button>
+            <img class="nav-button" src="{{ asset('images/achievement-badges/chapter1.jpg') }}" alt="Dicitonary">
+        </button>
     </nav>
     <a class="text-blue-500" href="{{ url('/') }}">Return</a>
     <h1 class="text-9xl font-black text-center" style="">Florante at Laura</h1> <br> <br>

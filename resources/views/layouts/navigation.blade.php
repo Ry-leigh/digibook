@@ -4,7 +4,7 @@
     <div class="hidden sm:flex sm:items-center sm:ms-6">
         <x-dropdown align="left" width="48">
             <x-slot name="trigger">
-                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white hover:text-gray-100 focus:outline-none transition ease-in-out duration-150">
+                <button style="text-shadow: 0 0 0.4rem rgb(0, 0, 0);, 0 0 1rem rgba(96, 96, 96, 0.6);" class="inline-flex items-center px-3 py-2 border border-transparent text-xl font-bold leading-4 font-medium rounded-md text-white hover:text-gray-100 focus:outline-none transition ease-in-out duration-150">
                     <div>{{ Auth::user()->name }}</div>
 
                     <div class="ms-1">
