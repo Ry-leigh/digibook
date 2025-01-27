@@ -7,6 +7,7 @@
     <title>{{ $dictionary->word }}</title>
 </head>
 <body>
+    <a href="{{ route('dictionary.index') }}">Return</a>
     <h1>{{ $dictionary->word }}</h1>
     <p>{{ $dictionary->definition }}</p>
 </body>
