@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/dictionary', [DictionaryController::class, 'index'])->name('dictionary.index');
+    Route::get('/dictionary/{dictionary}', [DictionaryController::class, 'show'])->name('dictionary.show');
 
     Route::get('/achievements', [UserAchievementController::class, 'index'])->name('achievement.index');
     Route::put('/achievements/dictionary', [UserAchievementController::class, 'visitDictionary'])->name('achievement.dictionary');

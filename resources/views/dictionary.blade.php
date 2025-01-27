@@ -12,6 +12,12 @@
         @method('PUT')
         <button type="submit">Return</button>
     </form>
-    
+
+    @foreach ($dictionaries as $dictionary)
+        <div>
+            <a href="{{ route('dictionary.show', $dictionary->id) }}">{{ $dictionary->word }}</a>
+        </div>
+    @endforeach
+
 </body>
 </html>
