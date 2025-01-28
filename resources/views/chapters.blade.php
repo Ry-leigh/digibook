@@ -119,7 +119,7 @@
                         </a>
                     @else
                         <div>
-                            <img src="{{ asset('images/chapter-covers/chapter' . $i . '.jpg') }}" alt="" style="filter: grayscale(90%);">
+                            <img src="{{ asset('images/chapter-covers/chapter' . $i . '.jpg') }}" alt="" style="filter: grayscale(100%);">
                         </div>
                         <p class="play-button">Locked</p>
                     @endif

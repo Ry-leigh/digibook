@@ -204,10 +204,6 @@ class DictionarySeeder extends Seeder
                 'definition' => 'diyosa ng karagatan at kalahati ng katawan ay babae at kalahati ay isda'
             ],
             [
-                'word' => 'Nimpas',
-                'definition' => 'mga diwata o diyosa na naninirahan sa gubat, ilog, batis at bundok'
-            ],
-            [
                 'word' => 'Tigre',
                 'definition' => 'isang mabangis na hayop'
             ],
@@ -266,10 +262,6 @@ class DictionarySeeder extends Seeder
             [
                 'word' => 'Syerpe',
                 'definition' => 'ahas o serpiyente'
-            ],
-            [
-                'word' => 'Higera',
-                'definition' => 'punong kahoy na malapad ang dahon at kadalasang nauugnay sa kalungkutan'
             ],
             [
                 'word' => 'Pupas',

@@ -7,50 +7,104 @@
     <title>Florante at Laura</title>
 </head>
 <style>
-    body {
-        background-image: url('{{ asset('images/chapter-covers/chapter1.jpg') }}');
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
+
+    body {
+        background:
+            linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.695) 100%) no-repeat,
+            url('{{ asset('images/chapter-covers/download.png') }}') no-repeat;
+        background-size: 100% 100%, cover;
+        background-repeat: no-repeat;
+    }
+
 
     .dropdown {
         position: absolute;
+        top: 2rem;
+        left: 1rem;
     }
 
-    nav {
+    .nav {
         display: flex;
         justify-content: flex-end;
-        margin: 0.5rem;
+        padding: 1rem 3rem 0 0;
     }
 
-    .nav-button {
-        height: 7rem;
+    .nav-button, .sound-button {
+        height: 4.5rem;
         width: auto;
-        margin: 0.5rem;
+        margin: 1rem 1.2rem;
         border-radius: 50%;
         aspect-ratio: 1/1;
+        cursor: pointer;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .sound-button#mute {
+        background-image: url('{{ asset('images/dashboard-resources/mute.png') }}');
+    }
+
+    .sound-button#unmute {
+        background-image: url('{{ asset('images/dashboard-resources/unmute.png') }}');
+    }
+
+    .title {
+        position: absolute;
+        right: 12rem;
+        top: 7rem;
+        height: 27rem;
+    }
+
+    .play-button {
+        position: absolute;
+        right: 8rem;
+        bottom: 3rem;
+        height: 13rem
     }
 </style>
 <body>
     <div class="dropdown">
         @include('layouts.navigation')
     </div>
-    <nav>
+    <nav class="nav">
         <a href="{{ route('dictionary.index') }}" >
-            <img class="nav-button" src="{{ asset('images/achievement-badges/chapter1.jpg') }}" alt="Dicitonary">
+            <img class="nav-button" src="{{ asset('images/dashboard-resources/dictionary.png') }}" alt="Dicitonary">
         </a>
         <a href="{{ route('achievement.index') }}">
-            <img class="nav-button" src="{{ asset('images/achievement-badges/chapter1.jpg') }}" alt="Dicitonary">
+            <img class="nav-button" src="{{ asset('images/dashboard-resources/achievements.png') }}" alt="Achievement">
         </a>
         <a href="{{ url('/about') }}">
-            <img class="nav-button" src="{{ asset('images/achievement-badges/chapter1.jpg') }}" alt="Dicitonary">
+            <img class="nav-button" src="{{ asset('images/dashboard-resources/about.png') }}" alt="About">
         </a>
-        <button>
-            <img class="nav-button" src="{{ asset('images/achievement-badges/chapter1.jpg') }}" alt="Dicitonary">
-        </button>
+        <div class="sound-button" id="unmute" onclick="toggleMute()"></div>
+        <script>
+            function toggleMute() {
+                const button = document.getElementById("mute") || document.getElementById("unmute");
+                const muteImageUrl = "{{ asset('images/dashboard-resources/mute.png') }}";
+                const unmuteImageUrl = "{{ asset('images/dashboard-resources/unmute.png') }}";
+
+                if (button.id === "mute") {
+                    button.id = "unmute";
+                    button.style.backgroundImage = `url(${unmuteImageUrl})`;
+                } else {
+                    button.id = "mute";
+                    button.style.backgroundImage = `url(${muteImageUrl})`;
+                }
+            }
+        </script>
     </nav>
-    <a class="text-blue-500" href="{{ url('/') }}">Return</a>
-    <h1 class="text-9xl font-black text-center" style="">Florante at Laura</h1> <br> <br>
+    <img class="title" src="{{ asset('images/dashboard-resources/title.png') }}" alt="Florante & Laura">
     <div class="">
-        <a class="text-blue-500" href="{{ route('chapters.index') }}">Play Game</a>
+        <a href="{{ route('chapters.index') }}">
+            <img class="play-button" src="{{ asset('images/dashboard-resources/play-button.png') }}" alt="Play">
+        </a>
     </div>
 </body>
 </html>
