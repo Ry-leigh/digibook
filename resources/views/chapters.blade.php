@@ -8,10 +8,12 @@
 </head>
 <style>
     body {
-        background-color: cornflowerblue;
-        background-image: url({{ asset('images/chapter-covers/chapter3.jpg') }})
+        background:
+            linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 95%, rgb(0, 0, 0) 100%) no-repeat,
+            rgb(44, 62, 81);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
-
     .main-chapter {
         display: flex;
         flex-direction: column;
@@ -47,12 +49,15 @@
         -webkit-backdrop-filter: blur(6.5px); */
     }
 
-    .hidden {
+    /* .hidden {
         display: none;
-    }
+    } */
 
     .content {
         width: 100%;
+        border: 0.1rem solid white;
+        border-radius: 0.7rem;
+
     }
 
     .content > div {
@@ -78,10 +83,33 @@
     .locked-bg {
         filter: grayscale(80%);
     }
+
+    .title {
+        display: block;
+        margin: 2.5rem auto;
+        height: 10rem;
+    }
+
+    .return-button {
+        height: 4.5rem;
+        width: auto;
+        margin: 1rem 1.2rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+    }
 </style>
 <body>
-    <a href="{{ route('dashboard') }}">Return</a>
-    <h1>Florante at Laura</h1>
+    <a href="{{ route('dashboard') }}" >
+        <img class="return-button" src="{{ asset('images/dashboard-resources/dictionary.png') }}" alt="Dicitonary">
+    </a>
+    <img class="title" src="{{ asset('images/chapter-covers/title.png') }}" alt="">
     <div class="main-chapter">
         <h1>Sa Babasa Nito</h1>
         <div class="chapter">
@@ -128,7 +156,7 @@
         </div>
     @endfor
 
-    <script>
+    {{-- <script>
         const chapters = document.querySelectorAll('.main-chapter');
 
         chapters.forEach(chapter => {
@@ -137,6 +165,6 @@
                 content.classList.toggle('hidden');
             });
         });
-    </script>
+    </script> --}}
 </body>
 </html>
