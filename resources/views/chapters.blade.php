@@ -107,7 +107,7 @@
 </style>
 <body>
     <a href="{{ route('dashboard') }}" >
-        <img class="return-button" src="{{ asset('images/dashboard-resources/dictionary.png') }}" alt="Dicitonary">
+        <img class="return-button" src="{{ asset('images/chapters/return.png') }}" alt="Dicitonary">
     </a>
     <img class="title" src="{{ asset('images/chapter-covers/title.png') }}" alt="">
     <div class="main-chapter">
