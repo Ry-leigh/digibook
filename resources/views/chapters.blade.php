@@ -107,7 +107,7 @@
 </style>
 <body>
     <a href="{{ route('dashboard') }}" >
-        <img class="return-button" src="{{ asset('images/chapters/return.png') }}" alt="Dicitonary">
+        <img class="return-button" src="{{ asset('images/chapter/return.png') }}" alt="Dicitonary">
     </a>
     <img class="title" src="{{ asset('images/chapter-covers/title.png') }}" alt="">
     <div class="main-chapter">
@@ -136,7 +136,7 @@
                 <div class="hidden content">
                     @if ($count >= $i)
                         <div>
-                            <img src="{{ asset('images/chapter-covers/chapter' . $i . '.jpg') }}" alt="">
+                            <img src="{{ asset('images/chapter-covers/chapter' . $i . '.png') }}" alt="">
                         </div>
                         <a class="play-button" href="{{ route('chapters.show', [$chapter = $i]) }}">
                             @if ($count == $i)
@@ -147,7 +147,7 @@
                         </a>
                     @else
                         <div>
-                            <img src="{{ asset('images/chapter-covers/chapter' . $i . '.jpg') }}" alt="" style="filter: grayscale(100%);">
+                            <img src="{{ asset('images/chapter-covers/chapter' . $i . '.png') }}" alt="" style="filter: grayscale(100%);">
                         </div>
                         <p class="play-button">Locked</p>
                     @endif

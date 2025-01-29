@@ -17,7 +17,7 @@
     body {
         background:
             linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.695) 100%) no-repeat,
-            url('{{ asset('images/chapter-covers/download.png') }}') no-repeat;
+            url('{{ asset('images/dashboard-resources/background.png') }}') no-repeat;
         background-size: 100% 100%, cover;
         background-repeat: no-repeat;
     }

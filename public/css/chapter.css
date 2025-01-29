@@ -1,0 +1,178 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.background-scene {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.narrator-box {
+    margin: 0 auto;
+    width: 100%;
+    height: 5rem;
+    background: radial-gradient(ellipse at 50% 120%, rgba(0,0,0,0.616185516672036) 0%, rgba(0,0,0,0.5440205682184278) 37%, rgba(0,0,0,0.32752572285760306) 53%, rgba(255,255,255,0) 70%);
+    background-position: center;
+    position: absolute;
+    bottom: 10.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.narrator-box > h1 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin: 2.2rem 0 0 0;
+    font-weight:100
+}
+
+.no-narrator-box {
+    margin: 0 auto;
+    width: 100%;
+    height: 2.5rem;
+    background: radial-gradient(ellipse at 50% 120%, rgba(0,0,0,0.616185516672036) 0%, rgba(0,0,0,0.5440205682184278) 27%, rgba(0,0,0,0.32752572285760306) 44%, rgba(255,255,255,0) 70%);
+    background-position: center;
+    position: absolute;
+    bottom: 10.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.no-narrator-box > h1 {
+    display: none;
+}
+
+.dialogue-box {
+    margin: 0 auto;
+    width: 100%;
+    height: 13rem;
+    background: radial-gradient(ellipse at 50% 10%, rgba(0, 0, 0, 0.656) 0%, rgba(0, 0, 0, 0.59) 37%, rgba(0, 0, 0, 0.399) 53%, rgba(255, 255, 255, 0) 70%);
+    background-position: center;
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dialogue-box::before {
+    content: '';
+    position: absolute;
+    top: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 2px;
+    border-radius: 100%;
+    background-color: rgb(195, 148, 29);
+}
+
+.dialogue-box > p {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem auto auto auto;
+    letter-spacing: 0.04rem;
+    line-height: 1.8rem;
+    white-space: pre-line;
+}
+
+.loader {
+    height: 1.3rem;
+    position: absolute;
+    bottom: 0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: hue-rotate(20deg) saturate(1) brightness(10);
+}
+
+.choice-box {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 20rem;
+    position: absolute;
+    left: 66.5%;
+    bottom: 11rem;
+}
+
+.no-choice {
+    display: none;
+}
+
+.choice {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.662), transparent);
+    margin: 0.3rem;
+    border: 0.05rem solid white;
+    border-right: none;
+    border-radius: 50rem 200% 200% 50rem;
+    cursor: pointer;
+}
+
+.choice > p {
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: 0.04rem;
+    padding: 0.62rem 1rem;
+    margin: 0;
+}
+
+.lives {
+    position: absolute;
+    top: 2.5rem;
+    right: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.lives > img {
+    height: 3.5rem;
+    margin: 0 1rem;
+}
+
+.next-chapter {
+    position: absolute;
+    bottom: 3rem;
+    right: 8rem;
+}
+
+.next-chapter > button {
+    width: 11.6rem; /* Adjust the button size */
+    height: 3rem; /* Adjust the button size */
+    background-size: cover; /* Makes sure the image covers the entire button */
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px; /* Hides the text */
+}
+
+.return-button {
+    height: 4.5rem;
+    width: auto;
+    margin: 1rem 1.2rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
