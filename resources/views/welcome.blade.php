@@ -30,7 +30,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("welcomebg.png");
+  background-image: url("{{ asset('images/welcomebg.png') }}");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -55,7 +55,7 @@ html, body {
 .button {
   width: 200px;
   height: 60px;
-  background-image: url("button.png");
+  background-image: url('{{ asset('images/button.png') }}');
   background-size: 100% 100%;
   background-position: center;
   background-color: transparent;
@@ -89,28 +89,27 @@ html, body {
 <body>
 
 <div class="backgroundimg">
-    <h1>Digibook</h1>
 
     @if (Route::has('login'))
         @auth
-            <a href="{{ url('/digibook') }}">    <div class="button-container">
+            <a href="{{ url('/digibook') }}">
+            <div class="button-container">
                 <button class="button">Start</button>
-            </div></a>
+            </div>
+            </a>
         @else
-            <a href="{{ route('login') }}"><div class="top-left-buttons">
+        <div class="top-left-buttons">
+            <a href="{{ route('login') }}">
                 <button class="button">Login</button>
-            </div></a> <br>
+            </a>
             @if (Route::has('register'))
-                <a href="{{ route('register') }}"><div class="top-left-buttons">
-                    <button class="button">Register</button>
-                </div></a> <br>
+            <a href="{{ route('register') }}">
+                <button class="button">Register</button>
+            </a>
             @endif
+        </div>
         @endauth
     @endif
-
-    <footer>
-        Group1. All Rights Reserved
-    </footer>
 </div>
 </body>
 </html>
