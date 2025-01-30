@@ -55,7 +55,7 @@
         <!-- Bookworm Achievement -->
         <div class="achievement-card">
             <img class="{{ $achievements->visit_dictionary == 0 ? 'locked-badge' : 'unlocked-badge' }}"
-                 src="{{ asset('images/achievement-badges/bookworm.jpg') }}"
+                 src="{{ asset('images/achievement-badges/bookworm.png') }}"
                  alt="Bookworm" class="w-full h-48 object-cover rounded-md">
             <h3 class="text-xl font-semibold mt-3">Bookworm</h3>
             <p class="text-md text-gray-700 italic">Secret Achievement</p>
@@ -64,7 +64,7 @@
         <!-- Thanks to You Achievement -->
         <div class="achievement-card">
             <img class="{{ $achievements->visit_about == 0 ? 'locked-badge' : 'unlocked-badge' }}"
-                 src="{{ asset('images/achievement-badges/thanks-to-you-from-us.jpg') }}"
+                 src="{{ asset('images/achievement-badges/thanks-to-you-from-us.png') }}"
                  alt="Thanks to You" class="w-full h-48 object-cover rounded-md">
             <h3 class="text-xl font-semibold mt-3">Thanks to You From Us</h3>
             <p class="text-md text-gray-700 italic">Secret Achievement</p>
@@ -83,7 +83,7 @@
         @for ($i = 1; $i <= 30; $i++)
             <div class="achievement-card">
                 <img class="{{ $count > $i ? 'unlocked-badge' : 'locked-badge' }}"
-                     src="{{ asset('images/achievement-badges/chapter' . $i . '.jpg') }}"
+                     src="{{ asset('images/achievement-badges/chapter' . $i . '.png') }}"
                      alt="Chapter {{ $i }}" class="w-full h-48 object-cover rounded-md">
                 <h3 class="text-xl font-semibold mt-3">Chapter {{ $i }}</h3>
                 <p class="text-md text-gray-700">Finish Chapter {{ $i }}</p>

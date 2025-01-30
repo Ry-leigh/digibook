@@ -33,13 +33,13 @@
     <h1 class="text-4xl font-semibold border-b-4 border-yellow-700 pb-2 mb-6 text-center">
         📖 Malalim na Salitang Tagalog
     </h1>
-    <form method="POST" action="{{ route('dictionary.index') }}" class="mb-6">
+    <form method="POST" action="{{ route('achievement.dictionary') }}" class="mb-6">
         @csrf
         @method('PUT')
         <button type="submit"
             class="bg-gradient-to-r from-red-700 to-red-900 text-white px-6 py-2 rounded-lg
                    shadow-md hover:scale-105 transition transform hover:shadow-lg">
-            <!-- insert button -->
+            Return
         </button>
     </form>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">

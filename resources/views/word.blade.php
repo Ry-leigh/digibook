@@ -33,16 +33,28 @@
     <nav class="w-full max-w-3xl bg-yellow-900 text-white p-4 rounded-lg mb-6 shadow-lg text-center">
         <a href="{{ route('dictionary.index') }}"
            class="text-lg font-semibold hover:text-yellow-300 transition">
-            <!-- Insert Button -->
+           <img style="height: 4.5rem;
+        width: auto;
+        margin: 1rem 1.2rem;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;" src="{{ asset('images/chapter/return.png') }}" alt="Dicitonary">
         </a>
     </nav>
-    <div class="mb-4 text-center">
-        <span class="text-sm text-gray-600 italic">Prev...</span><br>
+    <div class="border-decor max-w-3xl w-full text-center p-6">
+        <span class="mt-4 text-lg text-gray-800 italic">Prev...</span><br>
         <a href="{{ route('dictionary.show', $previous->id) }}"
-           class="text-lg text-yellow-800 font-semibold hover:text-red-700 transition" >
+           class="text-4xl font-semibold text-yellow-900" >
             {{ $previous->word }}
         </a>
     </div>
+    <br>
     <div class="border-decor max-w-3xl w-full text-center p-6">
         <h1 class="text-4xl font-semibold text-yellow-900">
             {{ $dictionary->word }}
@@ -51,10 +63,11 @@
             {{ $dictionary->definition }}
         </p>
     </div>
-    <div class="mt-4 text-center">
-        <span class="text-sm text-gray-600 italic">Next...</span><br>
+    <br>
+    <div class="border-decor max-w-3xl w-full text-center p-6">
+        <span class="mt-4 text-lg text-gray-800 italic">Next...</span><br>
         <a href="{{ route('dictionary.show', $next->id) }}"
-           class="text-lg text-yellow-800 font-semibold hover:text-red-700 transition">
+           class="text-4xl font-semibold text-yellow-900">
             {{ $next->word }}
         </a>
     </div>
