@@ -13,7 +13,7 @@
     @endif
 </head>
 <style>
-      * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,6 +22,7 @@
 html, body {
   height: 100%;
   width: 100%;
+  position: relative; /* Ensure elements inside can be positioned properly */
 }
 
 .backgroundimg {
@@ -43,6 +44,7 @@ html, body {
   top: 20px;
   left: 20px;
   gap: 10px;
+  z-index: 2; /* Ensure buttons are above the background */
 }
 
 .button-container {
@@ -50,6 +52,7 @@ html, body {
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2; /* Ensure the Start button is clickable */
 }
 
 .button {
@@ -68,6 +71,8 @@ html, body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 2; /* Ensure buttons are above the background */
+  text-decoration: none; /* Remove underline */
 }
 
 @media (max-width: 768px) {
@@ -88,28 +93,28 @@ html, body {
 </style>
 <body>
 
-<div class="backgroundimg">
+<div class="backgroundimg"></div> <!-- Moved background image div out -->
 
-    @if (Route::has('login'))
-        @auth
-            <a href="{{ url('/digibook') }}">
-            <div class="button-container">
-                <button class="button">Start</button>
-            </div>
-            </a>
-        @else
-        <div class="top-left-buttons">
-            <a href="{{ route('login') }}">
-                <button class="button">Login</button>
-            </a>
-            @if (Route::has('register'))
-            <a href="{{ route('register') }}">
-                <button class="button">Register</button>
-            </a>
-            @endif
-        </div>
-        @endauth
-    @endif
-</div>
+@if (Route::has('login'))
+    @auth
+    <div class="button-container">
+        <a class="button" href="{{ url('/digibook') }}">
+            Start
+        </a>
+    </div>
+    @else
+    <div class="top-left-buttons">
+        <a class="button" href="{{ route('login') }}">
+            Login
+        </a>
+        @if (Route::has('register'))
+        <a class="button" href="{{ route('register') }}">
+            Register
+        </a>
+        @endif
+    </div>
+    @endauth
+@endif
+
 </body>
 </html>
